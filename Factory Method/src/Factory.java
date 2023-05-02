@@ -3,16 +3,30 @@ import resource.Car;
 import resource.Van;
 import resource.Vehicle;
 
+/*Factory Method = Factory + Singleton*/
+
 public class Factory {
-    public Vehicle getCar() {
-        return new Car();
+
+    private static Factory factory;
+
+    private Factory() {
     }
 
-    public Vehicle getVan() {
-        return new Van();
+    public static Factory getInstance() {
+        return factory == null ? factory = new Factory() : factory;
     }
 
-    public Vehicle getBus() {
-        return new Bus();
+
+    public Vehicle getVehicle(VehicleType vehicleType) {
+        switch (vehicleType) {
+            case CAR:
+                return new Car();
+            case VAN:
+                return new Van();
+            case BUS:
+                return new Bus();
+            default:
+                return null;
+        }
     }
 }
