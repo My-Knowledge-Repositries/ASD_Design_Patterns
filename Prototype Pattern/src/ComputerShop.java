@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ComputerShop {
+public class ComputerShop implements Cloneable{
     private String shop;
     private ArrayList<Computer> computers = new ArrayList<>();
 
@@ -35,5 +35,15 @@ public class ComputerShop {
                 "shop='" + shop + '\'' +
                 ", computers=" + computers +
                 '}';
+    }
+
+    @Override
+    protected ComputerShop clone() throws CloneNotSupportedException {
+        ComputerShop c = new ComputerShop();
+        for (Computer tempT:getComputers()
+             ) {
+            c.getComputers().add(tempT);
+        }
+        return c;
     }
 }
