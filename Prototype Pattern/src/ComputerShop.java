@@ -4,6 +4,15 @@ public class ComputerShop {
     private String shop;
     private ArrayList<Computer> computers = new ArrayList<>();
 
+    public void initializeComputers(){
+        for (int i = 0; i < 100; i++) {
+            Computer c= new Computer();
+            c.setBrand("Computer "+(i+1));
+            c.setModel(i);
+            getComputers().add(c);
+        }
+    }
+
     public String getShop() {
         return shop;
     }
