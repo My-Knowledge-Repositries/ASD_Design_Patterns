@@ -23,4 +23,8 @@ public class ComputerBuilder {
         this.displaySize = displaySize;
         return this;
     }
+
+    public Computer getComputer(){
+        return new Computer(brand, ram, displaySize, diskSpace);
+    }
 }
