@@ -1,17 +1,18 @@
 import resource.Bus;
 import resource.Car;
 import resource.Van;
+import resource.Vehicle;
 
 public class Factory {
-    public Car getCar() {
+    public Vehicle getCar() {
         return new Car();
     }
 
-    public Van getVan() {
+    public Vehicle getVan() {
         return new Van();
     }
 
-    public Bus getBus() {
+    public Vehicle getBus() {
         return new Bus();
     }
 }

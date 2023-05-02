@@ -1,4 +1,4 @@
 package resource;
 
-public class Van {
+public class Van implements Vehicle{
 }
