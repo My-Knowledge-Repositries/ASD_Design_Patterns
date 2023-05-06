@@ -6,9 +6,9 @@ public abstract class AbstractPhoneFactory {
     public static OsFactory getFactory(OsType type){
         switch (type){
             case ANDROID:
-                return null;
+                return new AndroidFactory();
             case IOS:
-                return null;
+                return new IOSFactory();
             default:
                 return null;
         }

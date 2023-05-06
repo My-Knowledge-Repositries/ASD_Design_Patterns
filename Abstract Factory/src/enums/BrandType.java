@@ -1,4 +1,4 @@
-package process;
+package enums;
 
 public enum BrandType {
     HTC, GOOGLE, APPLE
